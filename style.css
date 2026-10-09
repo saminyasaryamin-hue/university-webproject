@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background: #f4f7f6;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(235, 94, 85, 0.08) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(42, 157, 143, 0.08) 0px, transparent 50%);
+  color: #2d3748;
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+header {
+  background: linear-gradient(135deg, #1d3557 0%, #2a9d8f 50%, #e76f51 100%);
+  color: #ffffff;
+  padding: 1.5rem 3rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  background: linear-gradient(to right, #ffffff, #f4a261);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 6px 12px;
+  border-radius: 30px;
+  backdrop-filter: blur(8px);
+}
+
+nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  padding: 8px 16px;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+  background-color: #ffffff;
+  color: #e76f51;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+main {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  border: 1px solid rgba(226, 232, 240, 0.8);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.07);
+}
+
+.card h2 {
+  color: #1d3557;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 22px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid #f4a261;
+  display: inline-block;
+}
+
+.profile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+.info-group {
+  background: #f8fafc;
+  padding: 14px 18px;
+  border-radius: 12px;
+  border-left: 4px solid #2a9d8f;
+}
+
+.info-group label {
+  font-size: 0.78rem;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+}
+
+.info-group p {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin-top: 2px;
+}
+
+.status-active {
+  color: #2a9d8f !important;
+}
+
+.payment-overview {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 30px;
+}
+
+.balance-box {
+  background: linear-gradient(135deg, #2a9d8f 0%, #264653 100%);
+  color: white;
+  border-radius: 14px;
+  padding: 28px;
+  flex: 1;
+  min-width: 260px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 0 8px 20px rgba(42, 157, 143, 0.25);
+}
+
+.balance-box h3 {
+  color: #e0f2fe;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.balance-box .amount {
+  font-size: 2.6rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-top: 6px;
+}
+
+.pay-form {
+  background: #fdfbf7;
+  border: 1px solid #fed7aa;
+  border-radius: 14px;
+  padding: 24px;
+  flex: 1.5;
+  min-width: 280px;
+}
+
+.pay-form h3 {
+  margin-bottom: 16px;
+  color: #1d3557;
+  font-size: 1.1rem;
+}
+
+.input-group {
+  margin-bottom: 14px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.85rem;
+  margin-bottom: 6px;
+  color: #475569;
+  font-weight: 600;
+}
+
+.input-group input, .input-group select {
+  width: 100%;
+  padding: 10px 14px;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+  background-color: #ffffff;
+}
+
+.input-group input:focus, .input-group select:focus {
+  border-color: #e76f51;
+}
+
+button {
+  width: 100%;
+  background: linear-gradient(135deg, #e76f51 0%, #f4a261 100%);
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  margin-top: 6px;
+  box-shadow: 0 4px 14px rgba(231, 111, 81, 0.3);
+  transition: all 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(231, 111, 81, 0.4);
+}
+
+#payMessage {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.sub-title {
+  margin-bottom: 16px;
+  color: #1d3557;
+  font-size: 1.1rem;
+}
+
+.history-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.history-table th, .history-table td {
+  padding: 14px 16px;
+  text-align: left;
+}
+
+.history-table th {
+  background-color: #1d3557;
+  color: #ffffff;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.history-table td {
+  border-bottom: 1px solid #f1f5f9;
+  background-color: #ffffff;
+  font-size: 0.95rem;
+}
+
+.history-table tr:last-child td {
+  border-bottom: none;
+}
+
+.badge.paid {
+  background-color: #d1fae5;
+  color: #065f46;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.course-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.course-list li {
+  padding: 16px 20px;
+  background-color: #f8fafc;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s ease;
+}
+
+.course-list li:hover {
+  background-color: #f1f5f9;
+}
+
+.credit {
+  background: #e76f51;
+  color: #ffffff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.notice-item {
+  background: #fff5f5;
+  border-left: 5px solid #e76f51;
+  padding: 16px 20px;
+  margin-bottom: 14px;
+  border-radius: 0 10px 10px 0;
+}
+
+.notice-item h4 {
+  color: #9b2c2c;
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.notice-item p {
+  font-size: 0.92rem;
+  color: #742a2a;
+}
+
+footer {
+  text-align: center;
+  padding: 24px;
+  background-color: #1d3557;
+  color: #94a3b8;
+  margin-top: 50px;
+  font-size: 0.9rem;
+}

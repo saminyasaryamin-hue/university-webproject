@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Student Portal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <div class="logo">University Portal</div>
+    <nav>
+      <ul>
+        <li><a href="#profile">Profile</a></li>
+        <li><a href="#payments">Payment Portal</a></li>
+        <li><a href="#courses">Courses</a></li>
+        <li><a href="#notices">Notices</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="profile" class="card">
+      <h2>Student Information</h2>
+      <div class="profile-grid">
+        <div class="info-group">
+          <label>Student Name:</label>
+          <p id="studentName">Samin Yasar Amin</p>
+        </div>
+        <div class="info-group">
+          <label>Student ID:</label>
+          <p id="studentId">1120103</p>
+        </div>
+        <div class="info-group">
+          <label>Department:</label>
+          <p>Computer Science & Engineering</p>
+        </div>
+        <div class="info-group">
+          <label>Academic Level:</label>
+          <p>Level 2, Term 1</p>
+        </div>
+        <div class="info-group">
+          <label>Current CGPA:</label>
+          <p>3.29</p>
+        </div>
+        <div class="info-group">
+          <label>Status:</label>
+          <p class="status-active">Active Enrolled</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="payments" class="card">
+      <h2>Fee & Payment Portal</h2>
+      <div class="payment-overview">
+        <div class="balance-box">
+          <h3>Total Outstanding Due</h3>
+          <p class="amount" id="dueAmount">$450.00</p>
+        </div>
+        <div class="pay-form">
+          <h3>Make a Payment</h3>
+          <div class="input-group">
+            <label for="payAmount">Amount ($):</label>
+            <input type="number" id="payAmount" placeholder="Enter amount">
+          </div>
+          <div class="input-group">
+            <label for="payMethod">Payment Method:</label>
+            <select id="payMethod">
+              <option value="Credit Card">Credit Card</option>
+              <option value="Mobile Banking">Mobile Banking</option>
+              <option value="Bank Transfer">Bank Transfer</option>
+            </select>
+          </div>
+          <button id="payBtn">Submit Payment</button>
+          <p id="payMessage"></p>
+        </div>
+      </div>
+
+      <h3 class="sub-title">Payment History</h3>
+      <table class="history-table">
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Description</th>
+            <th>Method</th>
+            <th>Amount</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="historyBody">
+          <tr>
+            <td>Jan 10, 2026</td>
+            <td>Semester Admission Fee</td>
+            <td>Bank Transfer</td>
+            <td>$1,200.00</td>
+            <td><span class="badge paid">Completed</span></td>
+          </tr>
+          <tr>
+            <td>Feb 05, 2026</td>
+            <td>Hall & Mess Charge</td>
+            <td>Mobile Banking</td>
+            <td>$250.00</td>
+            <td><span class="badge paid">Completed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="courses" class="card">
+      <h2>Registered Courses</h2>
+      <ul class="course-list">
+        <li>
+          <span><strong>CSE-201:</strong> Data Structures & Algorithms</span>
+          <span class="credit">3 Credits</span>
+        </li>
+        <li>
+          <span><strong>CSE-202:</strong> Data Structures Sessional</span>
+          <span class="credit">1.5 Credits</span>
+        </li>
+        <li>
+          <span><strong>PHY-211:</strong> Physics II (Optics & Modern Physics)</span>
+          <span class="credit">3 Credits</span>
+        </li>
+        <li>
+          <span><strong>MATH-203:</strong> Numerical Analysis & Vector Calculus</span>
+          <span class="credit">3 Credits</span>
+        </li>
+      </ul>
+    </section>
+
+    <section id="notices" class="card">
+      <h2>Notice Board</h2>
+      <div class="notice-item">
+        <h4>Mid-Semester Examination Schedule</h4>
+        <p>Published on: Oct 02, 2026 — Check the university website for the updated hall room seat plan.</p>
+      </div>
+      <div class="notice-item">
+        <h4>Library Due Clearances</h4>
+        <p>Published on: Sep 25, 2026 — All students must clear library book returns prior to exam card issuance.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 University Student Management System. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
